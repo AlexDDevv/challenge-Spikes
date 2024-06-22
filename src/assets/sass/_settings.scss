@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+$font: "Inter", sans-serif;
+$black: rgb(9, 12, 21);
+$gray: rgb(9, 12, 21, 0.5);
+$red: rgb(215, 63, 62, 0.9);
+$textColor: rgb(9, 12, 21, 0.9);
+$premium: rgb(207, 210, 221, 0.4);
+$borderColor: rgb(228, 228, 235);
+
+@mixin between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
