@@ -1,0 +1,83 @@
+.card {
+    background: white;
+    border: 1px solid $borderColor;
+    border-radius: 24px;
+    padding: 20px;
+    max-width: 400px;
+    position: relative;
+
+    .card-img {
+        display: flex;
+        border-radius: 18px;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            border-radius: 18px;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    .card-text {
+        margin-top: 15px;
+
+        .flex-title {
+            @include between;
+            margin-bottom: 9px;
+
+            .card-title {
+                color: $textColor;
+                font-family: $font;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .premium {
+                background: $premium;
+                border-radius: 6px;
+                color: $textColor;
+                font-family: $font;
+                font-size: 12px;
+                font-weight: 500;
+                padding: 6px;
+            }
+        }
+        .recreate {
+            color: $gray;
+            font-family: $font;
+            font-size: 15px;
+            margin-bottom: 60px;
+        }
+        .flex-btn {
+            @include between;
+
+            .start-btn {
+                background: transparent;
+                border: 1px solid $borderColor;
+                border-radius: 12px;
+                color: $black;
+                font-family: $font;
+                font-size: 18px;
+                font-weight: 500;
+                padding: 8px 12px;
+                @include center;
+                gap: 10px;
+                cursor: pointer;
+                box-shadow: inset 0 -3px 1px rgb(227, 227, 234, 0.4), 
+                0 3px 6px -1.5px rgb(95, 95, 95, 0.15), 
+                0 0 0 0.75px rgb(234, 236, 241, 0.1);
+                transition: transform 0.2s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.025);
+                }
+                &:active {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
