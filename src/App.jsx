@@ -1,8 +1,18 @@
+import data from "./data/data.json"
+import Card from "./components/Card"
 import "./assets/sass/index.scss"
 
 function App() {
     return (
-        <h1>HELLO WORLD</h1>
+        <div className="cards-container">
+            {data.cards.map((card, i) => (
+                <Card
+                    key={i}
+                    img={card.image}
+                    title={card.title}
+                />
+            ))}
+        </div>
     )
 }
 
