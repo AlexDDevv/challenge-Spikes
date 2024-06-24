@@ -1,0 +1,71 @@
+.menu-container {
+    position: relative;
+
+    .open-menu {
+        @include center;
+        background: transparent;
+        border: 1px solid $borderColor;
+        border-radius: 12px;
+        height: 40px;
+        width: 41px;
+        position: relative;
+        box-shadow: 0 0 0 0.7px rgb(228, 228, 235), 
+        inset 0 -3px 0.75px rgba(228, 228, 235, 0.4),
+        0 3px 6px -1.5px rgb(95, 95, 95, 0.15),
+        0 0 0 0.75px rgba(234, 236, 241, 0.1);
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        z-index: 1000;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+        &:active {
+            transform: scale(1);
+        }
+    }
+    .menu-showed {
+        position: relative;
+        z-index: 500;
+
+        .menu {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: white;
+            border: 1px solid $borderColor;
+            border-radius: 12px;
+            padding: 6px;
+            min-width: 160px;
+            margin-top: 4px;
+            z-index: 500;
+
+            div {
+                &:last-child {
+                    .menu-li {
+                        color: $red;
+                    }
+                }
+            }
+    
+            .menu-li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border-radius: 6px;
+                color: $black;
+                font-family: $font;
+                font-size: 12px;
+                font-weight: 500;
+                padding: 6px;
+                transition: background 0.2s ease-in-out;
+                cursor: pointer;
+                
+                &:hover {
+                    background: $liBg;
+                }
+            }
+        }
+    }
+}
