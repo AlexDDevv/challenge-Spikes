@@ -1,14 +1,33 @@
-[
-    {
-        "title": "Raycast Wallpaper #1",
-        "image": "/wallpaper1.png"
-    },
-    {
-        "title": "Raycast Wallpaper #2",
-        "image": "/wallpaper2.png"
-    },
-    {
-        "title": "Raycast Wallpaper #3",
-        "image": "/wallpaper3.png"
-    }
-]
+{
+    "cards": [
+        {
+            "title": "Raycast Wallpaper #1",
+            "image": "/wallpaper1.png"
+        },
+        {
+            "title": "Raycast Wallpaper #2",
+            "image": "/wallpaper2.png"
+        },
+        {
+            "title": "Raycast Wallpaper #3",
+            "image": "/wallpaper3.png"
+        }
+    ],
+    "menu": [
+        {
+            "delay": 0,
+            "icon": "/edit.png",
+            "content": "Edit Challenge"
+        },
+        {
+            "delay": 0.1,
+            "icon": "/share.png",
+            "content": "Share Challenge"
+        },
+        {
+            "delay": 0.2,
+            "icon": "/trash.png",
+            "content": "Delete Challenge"
+        }
+    ]
+}
