@@ -7,11 +7,17 @@ $red: rgb(215, 63, 62, 0.9);
 $textColor: rgb(9, 12, 21, 0.9);
 $premium: rgb(207, 210, 221, 0.4);
 $borderColor: rgb(228, 228, 235);
+$liBg: rgba(207, 210, 221, 0.2);
 
 @mixin between {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 * {
@@ -19,4 +25,42 @@ $borderColor: rgb(228, 228, 235);
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+}
+
+body {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 100%);
+    background-image: url("../img/bodyBg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include center;
+    height: 100svh;
+    padding: 0 10px;
+    position: relative;
+
+    @media screen and (max-width: 1024px) {
+        height: 100%;
+        padding: 50px 0;
+    }
+}
+
+.cards-container {
+    background: white;
+    @include center;
+    gap: 25px;
+    
+    @media screen and (max-width: 1024px) {
+        flex-wrap: wrap;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 300;
 }
